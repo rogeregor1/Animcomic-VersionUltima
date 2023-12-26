@@ -1,5 +1,5 @@
 <?php
-	
+	/*
 	# Conexion a la base de datos #
 	function conexion(){
 		
@@ -12,6 +12,44 @@
 		exit();
 		}   
 	}
+	*/
+
+
+	
+    $sql;
+    $pps = null;
+    $pdo = null;
+
+	function conexion() {
+
+    $host = "localhost";
+    $db = "inventario";
+    $user = "root";
+    $password = "";
+	$charset ="utf8mb4";
+
+        try {
+            $connection = "mysql:host=" . $host . ";dbname=" . $db . ";charset=" . $charset;
+            $options = [
+                PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+                PDO::ATTR_EMULATE_PREPARES   => false,
+            ];
+            //$this->pdo = new PDO($connection, $this->user, $this->password);
+            //return $this->pdo;
+            $pdo = new PDO($connection, $user, $password, $options);
+            return $pdo;
+            
+        } catch (PDOException $e) {
+            print_r('Error connection: ' . $e->getMessage());
+            exit();
+        }
+    }
+
+    /**
+     * liberar recursos de la base de datos
+     */
+   
+
 
 
 	# Verificar datos #
