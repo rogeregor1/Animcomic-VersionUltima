@@ -6,6 +6,7 @@
         <li class="carrito">
             <a href="#" class='btn-carrito'>Carrito</a>
             <div id="carrito-container">
+                <h1 style=" font-size: x-large;">Carrito de Compras</h1>
                 <div id="tabla">
 
                 </div>
