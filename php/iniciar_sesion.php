@@ -1,5 +1,5 @@
 <?php
-/*== incluyendo conexion a db ==*/
+/*== incluyendo conexion a database ==*/
 require_once "main.php";
 
 /*== Almacenando datos en variables==*/
